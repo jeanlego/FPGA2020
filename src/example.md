@@ -5,10 +5,8 @@ subtitle: FPGA2020
 footer: Odin_II Status & Roadmap \hspace{5pt} J.-P. Legault et al.
 
 author: > 
-  \underline{J.-P. Legault}\textsuperscript{1},
-  S.A. Damghani\textsuperscript{1}, 
-  M. Sohrabi\textsuperscript{1}, 
-  K. B. Kent\textsuperscript{1},\newline
+  \underline{J.-P. Legault}\textsuperscript{1},\newline
+  S.A. Damghani\textsuperscript{1}
 
 date: 2020.02.20
 
@@ -34,26 +32,27 @@ header-includes: |
 
 ### Synthesis goals and todo's
 
-- *70%* coverage with the micro-benchmarks, hoping for *~80%* with micro alone.
-- improve odin test framework to test for expected failures.
-- Add QoR to Odin ( see WIP #1167 )
-- Major keyword left: inout, assign, deassign.
-- Todo: finish task and scoping
-- Syntax support is tricky to document (Generate support status via Travis weekly?)
-- Adding some (VERY) basic system verilog support. i.e. `__FILE__ macro etc...
+- `<Q2>` *70%* coverage with the micro-benchmarks, hoping for *~80%* with micro alone
+- `<Q1>` improve odin test framework to test for expected failures.
+- `<Q1>` Add QoR to Odin ( see WIP #1167 )
+- `<Q3>` Major keyword left: inout, assign, deassign.
+- `<Q3>` Todo: finish task and scoping.
+- `<Q2>` Syntax support is tricky to document (Generate support status via Travis weekly?)
+- `<Q2>` Adding some (VERY) basic system verilog support OOG withing Odin.
+```verilog
+`__FILE__, `__LINE__, etc
+```
 
 ### Netlist improvements
 
-- Odin map all hard-logic to .subckt logic, the goal is to build heterogenous circuitry when advantageous (size vs speed tradeoffs).
-- Improving and adding ability to tweak soft-logic implementation of composite and hard-block logic.
-- Use HB adder (when and if available) to build soft multipliers.
-- Improve Custom Hard-Block interface.
+- `<Q1>` Odin map all hard-logic to .subckt logic, the goal is to build heterogenous circuitry when advantageous (size vs speed tradeoffs).
+- `<Q1>` Improving and adding ability to tweak soft-logic implementation of composite and hard-block logic. 
+- `<experimental Q1>` Use HB adder (when and if available) to build soft multipliers. 
+- `<experimental Q3>` Improve Custom Hard-Block interface.
 
 ## Contact Information
 
 **Centre For Advanced Studies Atlantic:**
 
-- Jean-Philippe Legault - jeanlego@Github
-- Mohammad Sohrabi - msohrabi2019@Github
-- Seyed A. Damgani - damghan@Github
-- Kenneth B. Kent - ken@unb.ca
+- Jean-Philippe Legault - M.Sc Computer Science - jeanlego@Github
+- Seyed A. Damgani - M.Sc Computer Science - damghan@Github
