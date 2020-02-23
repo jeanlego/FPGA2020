@@ -6,10 +6,8 @@ footer: Odin_II Status & Roadmap \hspace{5pt} J.-P. Legault et al.
 
 author: > 
   \underline{J.-P. Legault}\textsuperscript{1},
-  A. G. Graham\textsuperscript{1}, 
   S.A. Damghani\textsuperscript{1}, 
   M. Sohrabi\textsuperscript{1}, 
-  new kid TODO\textsuperscript{1}, 
   K. B. Kent\textsuperscript{1},\newline
 
 date: 2020.02.20
@@ -26,50 +24,36 @@ header-includes: |
 
 ## Goal
 
-In Progress
-
-- Increase test coverage of code
-- Bring up to with Verilog 2005 && Add some basic System Verilog support (macros, file, io)
-- Improve Hard-Block/Soft-logic mapping & Superficial Statistic to Improve Placement
-
-Future Work
-
-- Partial compilation ??
+- Improve test coverage
+- Bring up to Verilog 2005
+- Add some basic System Verilog support (macros, file, io)
+- Improve Hard-Block/Soft-logic heterogenous mapping
+- Superficial Statistic to Improve Placement
 
 ## Progress
 
-### Increase test coverage of code
+### Synthesis goals and todo's
 
-Currently:
-
-- 70% covered with the micro-benchmarks.
-- 72% covered with the full suite
-
-Desire:
-
-- ~80% with micro alone.
-
-### Bring up to with Verilog 2005 && Add some basic System Verilog support (macros, file, io)
-
-- List of Keyword support is in the README
-- The syntax support is tricky to document. Looking into a Symbiflow-esque runner that will run weekly (Travis?) to generate current test support (FAIL/PASS).
+- *70%* coverage with the micro-benchmarks, hoping for *~80%* with micro alone.
+- improve odin test framework to test for expected failures.
+- Add QoR to Odin ( see WIP #1167 )
+- Major keyword left: inout, assign, deassign.
+- Todo: finish task and scoping
+- Syntax support is tricky to document (Generate support status via Travis weekly?)
 - Adding some (VERY) basic system verilog support. i.e. `__FILE__ macro etc...
 
-### Improve Hard-Block/Soft-logic mapping & Superficial Statistic to Improve Placement
+### Netlist improvements
 
-Currently Odin map all hard-logic to .subckt logic, but there is work into trying to build heterogenous circuitry when advantageous (size vs speed tradeoffs) and also have tunable soft logic implementation
-
-## Future
-
-is now
+- Odin map all hard-logic to .subckt logic, the goal is to build heterogenous circuitry when advantageous (size vs speed tradeoffs).
+- Improving and adding ability to tweak soft-logic implementation of composite and hard-block logic.
+- Use HB adder (when and if available) to build soft multipliers.
+- Improve Custom Hard-Block interface.
 
 ## Contact Information
 
 **Centre For Advanced Studies Atlantic:**
 
-- Jean-Philippe Legault - jlegault@unb.ca
-- Aaron G. Graham - aaron.graham@unb.ca
-- Mohammad Sohrabi - xxx@unb.ca
-- Seyed A. Damgani - xxx@unb.ca
-- new kid TODO
+- Jean-Philippe Legault - jeanlego@Github
+- Mohammad Sohrabi - msohrabi2019@Github
+- Seyed A. Damgani - damghan@Github
 - Kenneth B. Kent - ken@unb.ca

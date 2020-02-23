@@ -4,7 +4,7 @@ TARGET := docker_build build help docs
 BUILD_DIR := $(CURDIR)/build
 TEX_ENGINE := xelatex
 PKG :=
-PANDOC_ARGS := --slide-level=4 --variable fontsize=12pt
+PANDOC_ARGS := --slide-level=4 --variable fontsize=13pt
 ASPECT_RATIO_LIST := 169 43
 
 $(TARGET): $(DEPENDS)
